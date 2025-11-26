@@ -1,43 +1,113 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Website</title>
-    <link rel="stylesheet" href="../static/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyCloud</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Welkom op mijn website!</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Over</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="intro">
-            <h2>Introductie</h2>
-            <p>Dit is de voorpagina van onze website. Hier kun je informatie over ons project plaatsen.</p>
-        </section>
+<header>
+  <div class="logo"><i class="fas fa-cloud"></i> SkyCloud</div>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#pricing">Prijzen</a>
+    <a href="#contact">Contact</a>
+    <button id="loginBtn">Login</button>
+  </nav>
+</header>
 
-        <section class="features">
-            <h2>Functies</h2>
-            <ul>
-                <li>Responsief ontwerp</li>
-                <li>Eenvoudige navigatie</li>
-                <li>Frontend en backend samenwerking</li>
-            </ul>
-        </section>
-    </main>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Jouw data, veilig in de cloud</h1>
+    <p>Upload, beheer en open je bestanden overal ter wereld</p>
+    <button class="cta-btn">Start gratis</button>
+  </div>
+  <div class="hero-image">
+    <img src="https://cdn-icons-png.flaticon.com/512/5113/5113046.png">
+  </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Mijn Website</p>
-    </footer>
+<section class="features" id="features">
+  <h2>Waarom SkyCloud?</h2>
+  <div class="feature-cards">
 
-    <script src="../static/script.js"></script>
+    <div class="feature-card">
+      <i class="fas fa-lock"></i>
+      <h3>Veilig</h3>
+      <p>Al je bestanden worden beveiligd met encryptie.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-cloud-upload-alt"></i>
+      <h3>Snel uploaden</h3>
+      <p>Upload bestanden razendsnel via onze servers.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-mobile"></i>
+      <h3>Overal beschikbaar</h3>
+      <p>Werkt op mobiel, tablet en desktop.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <h2>Abonnementen</h2>
+  <div class="plans">
+
+    <div class="plan">
+      <h3>Free</h3>
+      <p class="price">€0/maand</p>
+      <ul>
+        <li>5GB opslag</li>
+        <li>Basic support</li>
+      </ul>
+      <button>Kies plan</button>
+    </div>
+
+    <div class="plan highlight">
+      <h3>Pro</h3>
+      <p class="price">€9,99/maand</p>
+      <ul>
+        <li>100GB opslag</li>
+        <li>Snelle uploads</li>
+        <li>24/7 support</li>
+      </ul>
+      <button>Kies plan</button>
+    </div>
+
+    <div class="plan">
+      <h3>Business</h3>
+      <p class="price">€29,99/maand</p>
+      <ul>
+        <li>1TB opslag</li>
+        <li>Team accounts</li>
+        <li>Premium support</li>
+      </ul>
+      <button>Kies plan</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Naam" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Bericht"></textarea>
+    <button type="submit">Verstuur</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 SkyCloud | Alle rechten voorbehouden</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

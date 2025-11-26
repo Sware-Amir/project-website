@@ -1,4 +1,9 @@
-// Voorbeeld: een eenvoudige alert bij het laden van de pagina
-window.addEventListener('load', () => {
-    console.log("Welkom op de website!");
+document.getElementById("loginBtn").addEventListener("click", () => {
+  alert("Login pagina komt hier, bro 😎");
+});
+
+document.querySelector(".cta-btn").addEventListener("click", () => {
+  document.getElementById("pricing").scrollIntoView({
+    behavior: "smooth"
+  });
 });
