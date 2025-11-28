@@ -1,113 +1,254 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkyCloud</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureCloud - Veilige Cloud Storage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body class="bg-gradient-to-b from-blue-50 to-white">
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-bold text-blue-600">SecureCloud</h1>
+            </div>
+            <div class="flex items-center gap-3">
+                <button onclick="window.location.href='login.html'" class="px-6 py-2 text-gray-700 hover:text-gray-900 transition-colors">
+                    Inloggen
+                </button>
+                <button onclick="window.location.href='login.html?mode=register'" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    Gratis starten
+                </button>
+            </div>
+        </div>
+    </nav>
 
-<header>
-  <div class="logo"><i class="fas fa-cloud"></i> SkyCloud</div>
-  <nav>
-    <a href="#features">Features</a>
-    <a href="#pricing">Prijzen</a>
-    <a href="#contact">Contact</a>
-    <button id="loginBtn">Login</button>
-  </nav>
-</header>
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20 text-center">
+        <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            <span class="font-medium">100% veilig en versleuteld</span>
+        </div>
+        
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+            Jouw bestanden, veilig <br>
+            opgeslagen in de cloud
+        </h1>
+        
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+            SecureCloud is de veiligste manier om je bestanden op te slaan en te delen.
+            Met end-to-end encryptie heb alleen jij toegang tot je gegevens.
+        </p>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Jouw data, veilig in de cloud</h1>
-    <p>Upload, beheer en open je bestanden overal ter wereld</p>
-    <button class="cta-btn">Start gratis</button>
-  </div>
-  <div class="hero-image">
-    <img src="https://cdn-icons-png.flaticon.com/512/5113/5113046.png">
-  </div>
-</section>
+        <div class="flex items-center justify-center gap-4 mb-12">
+            <button onclick="window.location.href='login.html?mode=register'" class="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 text-lg font-medium">
+                <span>Start gratis</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </button>
+            <button onclick="window.location.href='login.html'" class="px-8 py-4 bg-white text-gray-700 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors text-lg">
+                Heb je al een account?
+            </button>
+        </div>
 
-<section class="features" id="features">
-  <h2>Waarom SkyCloud?</h2>
-  <div class="feature-cards">
+        <div class="flex items-center justify-center gap-8 text-gray-600">
+            <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>15 GB gratis opslag</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Geen creditcard vereist</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Altijd annuleren</span>
+            </div>
+        </div>
+    </section>
 
-    <div class="feature-card">
-      <i class="fas fa-lock"></i>
-      <h3>Veilig</h3>
-      <p>Al je bestanden worden beveiligd met encryptie.</p>
-    </div>
+    <!-- Features Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                Waarom kiezen voor SecureCloud?
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Wij bieden de beste combinatie van beveiliging, gebruiksgemak en prestaties
+            </p>
+        </div>
 
-    <div class="feature-card">
-      <i class="fas fa-cloud-upload-alt"></i>
-      <h3>Snel uploaden</h3>
-      <p>Upload bestanden razendsnel via onze servers.</p>
-    </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    End-to-end encryptie
+                </h3>
+                <p class="text-gray-600">
+                    Jouw bestanden worden versleuteld voordat ze ons bereiken. Alleen jij hebt de sleutels.
+                </p>
+            </div>
 
-    <div class="feature-card">
-      <i class="fas fa-mobile"></i>
-      <h3>Overal beschikbaar</h3>
-      <p>Werkt op mobiel, tablet en desktop.</p>
-    </div>
+            <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Altijd en overal toegang
+                </h3>
+                <p class="text-gray-600">
+                    Toegang tot je bestanden vanaf elk apparaat, waar je ook bent. Synchroniseer automatisch.
+                </p>
+            </div>
 
-  </div>
-</section>
+            <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Veilig delen
+                </h3>
+                <p class="text-gray-600">
+                    Deel bestanden en mappen met je team, met volledige controle over wie wat kan zien.
+                </p>
+            </div>
 
-<section class="pricing" id="pricing">
-  <h2>Abonnementen</h2>
-  <div class="plans">
+            <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Razendsnel
+                </h3>
+                <p class="text-gray-600">
+                    Upload en download je bestanden in een oogwenk met onze geoptimaliseerde infrastructuur.
+                </p>
+            </div>
 
-    <div class="plan">
-      <h3>Free</h3>
-      <p class="price">€0/maand</p>
-      <ul>
-        <li>5GB opslag</li>
-        <li>Basic support</li>
-      </ul>
-      <button>Kies plan</button>
-    </div>
+            <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg class="w-7 h-7 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Privacy gegarandeerd
+                </h3>
+                <p class="text-gray-600">
+                    Wij verkopen je data nooit. Jouw privacy is onze hoogste prioriteit.
+                </p>
+            </div>
 
-    <div class="plan highlight">
-      <h3>Pro</h3>
-      <p class="price">€9,99/maand</p>
-      <ul>
-        <li>100GB opslag</li>
-        <li>Snelle uploads</li>
-        <li>24/7 support</li>
-      </ul>
-      <button>Kies plan</button>
-    </div>
+            <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg class="w-7 h-7 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Betrouwbaar
+                </h3>
+                <p class="text-gray-600">
+                    99.9% uptime garantie en automatische backups om je data veilig te houden.
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <div class="plan">
-      <h3>Business</h3>
-      <p class="price">€29,99/maand</p>
-      <ul>
-        <li>1TB opslag</li>
-        <li>Team accounts</li>
-        <li>Premium support</li>
-      </ul>
-      <button>Kies plan</button>
-    </div>
+    <!-- CTA Section -->
+    <section class="bg-blue-600 text-white py-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">
+                Klaar om te beginnen?
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Sluit je aan bij duizenden gebruikers die hun bestanden veilig opslaan met SecureCloud
+            </p>
+            <button onclick="window.location.href='login.html?mode=register'" class="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center gap-2 text-lg font-medium">
+                <span>Start vandaag nog gratis</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+    </section>
 
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <h2>Contact</h2>
-  <form>
-    <input type="text" placeholder="Naam" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Bericht"></textarea>
-    <button type="submit">Verstuur</button>
-  </form>
-</section>
-
-<footer>
-  <p>© 2025 SkyCloud | Alle rechten voorbehouden</p>
-</footer>
-
-<script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <span class="text-lg font-bold">SecureCloud</span>
+                    </div>
+                    <p class="text-gray-400">
+                        De veiligste cloud storage oplossing voor particulieren en teams.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Product</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Features</a></li>
+                        <li><a href="#" class="hover:text-white">Prijzen</a></li>
+                        <li><a href="#" class="hover:text-white">Beveiliging</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Bedrijf</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Over ons</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white">Voorwaarden</a></li>
+                        <li><a href="#" class="hover:text-white">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2025 SecureCloud. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
